@@ -1,0 +1,282 @@
+@font-face {
+    font-family: c-bold;
+    src: url(./Assest/CooperLtBTBold.ttf);
+}
+
+@font-face {
+    font-family: c-light;
+    src: url(./Assest/CooperLtBTLight.ttf);
+}
+
+@font-face {
+    font-family: s;
+    src: url(./Assest/Sequel\ Sans\ Light\ Head.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: none;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+#cursor {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: springgreen;
+    z-index: 21;
+    mix-blend-mode: difference;
+    filter: drop-shadow(0 0 10px springgreen);
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    height: 10vh;
+    position: fixed;
+    z-index: 20;
+    background-color: #fff;
+    width: 100vw;
+}
+
+.brand h3 {
+    font-size: 30px;
+    font-family: c-light;
+}
+
+.brand h3::after {
+    content: " ";
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+    bottom: -1px;
+    background-color: springgreen;
+    width: 7.5px;
+    height: 7.5px;
+    border-radius: 50px;
+}
+
+.nav-items {
+    width: 50%;
+    justify-content: space-between;
+    font-family: s;
+    display: flex;
+    font-size: 16px;
+    font-weight: 100;
+    align-items: center;
+}
+
+.nav-items a {
+    overflow: hidden;
+}
+
+.nav-items button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: transparent;
+    border: 1px solid lightgray;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.green {
+    right: 100%;
+    width: 200px;
+    height: 50px;
+    background-color: springgreen;
+    position: absolute;
+    transition: all .5s ease;
+    z-index: -1;
+}
+
+button:hover .green {
+    right: 0;
+}
+
+.page {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#page1 h1 {
+    font-size: 5vw;
+    font-family: c-light;
+    font-weight: 100;
+    text-align: center;
+    position: relative;
+    z-index: 8;
+    position: relative;
+}
+
+#page1 h1::selection {
+    background-color: springgreen;
+    color: #fff;
+}
+
+#page1 .Solutions {
+    position: relative;
+}
+
+#page1 .Solutions::after {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1.5rem;
+    position: absolute;
+    content: "";
+    bottom: -0.8rem;
+    left: -0.25rem;
+    right: -0.25rem;
+    z-index: -1;
+    background-image: url(https://thisisdigital.co.uk/dist/images/underline-green.svg);
+}
+
+#page1 .des {
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#page1 .des h3 {
+    font-weight: 500;
+    font-family: s;
+}
+
+#page1 .des button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: transparent;
+    border: 1px solid lightgray;
+    font-size: 16px;
+    padding: 10px 40px;
+    border-radius: 25px;
+    position: relative;
+}
+
+#page1 img {
+    position: absolute;
+    width: 250px;
+    transition: all .5s ease;
+}
+
+#page1 img:hover {
+    transform: translateY(5%);
+}
+
+#page1 img:nth-of-type(1) {
+    left: 5vw;
+}
+
+#page1 img:nth-of-type(2) {
+    right: 9vw;
+    top: 6vw;
+}
+
+#page1 img:nth-of-type(3) {
+    bottom: 5vw;
+    right: 3vw;
+}
+
+#page2 {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vw;
+
+}
+
+#page2 p {
+    font-size: 18px;
+    font-weight: 100;
+    margin: 2vw 0;
+    font-family: s;
+}
+
+#page2 p::before {
+    content: " ";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    position: relative;
+    margin-right: 10px;
+    bottom: -2px;
+    background-color: springgreen;
+}
+
+#page2 h2 {
+    font-family: c-light;
+    text-align: center;
+    font-weight: 300;
+    font-size: 3vw;
+}
+
+#page2 .des {
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#page2 .des h3 {
+    font-weight: 500;
+    font-family: s;
+}
+
+#page2 .des button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: transparent;
+    border: 1px solid white;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 40px;
+    border-radius: 25px;
+    position: relative;
+    z-index: 10;
+}
+
+#page3 h3{
+
+    text-align: center;
+    font-size: 3vw;
+    font-family: c-light;
+    font-weight: 300;
+}
+
+#page3 .img-container{
+    display: flex;
+    margin-top: 10vh;
+}
+
+#page3 .img-container img{
+    width: 200px;
+}
